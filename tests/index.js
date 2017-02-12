@@ -34,7 +34,7 @@ test('single comment - one block', function (t) {
   t.equal(report.results.length, 1);
   t.equal(report.results[0].messages.length, 1);
   t.equal(report.results[0].messages[0][0].message, 'Unexpected console statement.');
-  t.equal(report.results[0].messages[0][0].line, 2);
+  t.equal(report.results[0].messages[0][0].line, 4);
   t.end();
 });
 
@@ -64,7 +64,7 @@ test('single comment - multiple blocks', function (t) {
   t.equal(report.results.length, 1);
   t.equal(report.results[0].messages.length, 2);
   t.equal(report.results[0].messages[0][0].message, 'Unexpected console statement.');
-  t.equal(report.results[0].messages[0][0].line, 2);
+  t.equal(report.results[0].messages[0][0].line, 4);
   t.equal(report.results[0].messages[1][0].message, 'Unexpected console statement.');
   t.equal(report.results[0].messages[1][0].line, 2);
   t.end();
