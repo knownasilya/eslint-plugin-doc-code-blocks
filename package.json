@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-doc-code-blocks",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Lint JavaScript in block comment code blocks",
   "keywords": [
     "eslint",
@@ -10,13 +10,15 @@
   "author": "Ilya Radchenko",
   "main": "lib/index.js",
   "scripts": {
-    "test": "node tests | tap-spec"
+    "test": "node tests | tap-spec",
+    "release": "standard-version"
   },
   "dependencies": {
     "extract-comments": "^0.10.1"
   },
   "devDependencies": {
     "eslint": "^3.9.1",
+    "standard-version": "^4.0.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3"
   },
