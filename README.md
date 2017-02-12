@@ -2,6 +2,8 @@
 
 Lint JavaScript in block comment code blocks
 
+[![Build Status](https://travis-ci.org/knownasilya/eslint-plugin-doc-code-blocks.svg?branch=master)](https://travis-ci.org/knownasilya/eslint-plugin-doc-code-blocks)
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
