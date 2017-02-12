@@ -13,8 +13,7 @@
     "test": "node tests | tap-spec"
   },
   "dependencies": {
-    "extract-comments": "^0.10.1",
-    "recast": "^0.11.21"
+    "extract-comments": "^0.10.1"
   },
   "devDependencies": {
     "eslint": "^3.9.1",
