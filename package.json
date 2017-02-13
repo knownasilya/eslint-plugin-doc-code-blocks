@@ -14,7 +14,8 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "extract-comments": "^0.10.1"
+    "extract-comments": "^0.10.1",
+    "line-column": "^1.0.2"
   },
   "devDependencies": {
     "eslint": "^3.9.1",

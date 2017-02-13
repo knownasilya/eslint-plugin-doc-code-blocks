@@ -20,14 +20,14 @@ var cli = new CLIEngine({
 
 cli.addPlugin('doc-code-blocks', plugin);
 
-test('single comment - one block', function (t) {
+test('single comment with block - failing block', function (t) {
   var shortText = [
     '/*',
     '```js',
     'var test = "a";',
     'console.log(test);',
     '```',
-    '*/'
+    '*/',
   ].join('\n');
   var report = cli.executeOnText(shortText, 'test.js');
 
@@ -35,6 +35,23 @@ test('single comment - one block', function (t) {
   t.equal(report.results[0].messages.length, 1);
   t.equal(report.results[0].messages[0].message, 'Unexpected console statement.');
   t.equal(report.results[0].messages[0].line, 4);
+  t.end();
+});
+
+test('single comment with block - passing block', function (t) {
+  var shortText = [
+    '/*',
+    '```js',
+    'function blah(test) {',
+    ' return test;',
+    '}',
+    '```',
+    '*/',
+  ].join('\n');
+  var report = cli.executeOnText(shortText, 'test.js');
+
+  t.equal(report.results.length, 1);
+  t.equal(report.results[0].messages.length, 0);
   t.end();
 });
 
@@ -64,8 +81,36 @@ test('single comment - multiple blocks', function (t) {
   t.equal(report.results.length, 1);
   t.equal(report.results[0].messages.length, 2);
   t.equal(report.results[0].messages[0].message, 'Unexpected console statement.');
-  t.equal(report.results[0].messages[0].line, 4);
+  t.equal(report.results[0].messages[0].line, 6);
   t.equal(report.results[0].messages[1].message, 'Unexpected console statement.');
-  t.equal(report.results[0].messages[1].line, 2);
+  t.equal(report.results[0].messages[1].line, 14);
+  t.end();
+});
+
+test('multiple comments with blocks - one failing block', function (t) {
+  var shortText = [
+    '/* hi */',
+    '/*',
+    '```js',
+    'var test = "a";',
+    'console.log(test);',
+    '```',
+    'some test',
+    '*/',
+    '',
+    '/*',
+    '```js',
+    'function test(val) {',
+    ' return val;',
+    '}',
+    '```',
+    '*/'
+  ].join('\n');
+  var report = cli.executeOnText(shortText, 'test.js');
+
+  t.equal(report.results.length, 1);
+  t.equal(report.results[0].messages.length, 1);
+  t.equal(report.results[0].messages[0].message, 'Unexpected console statement.');
+  t.equal(report.results[0].messages[0].line, 5);
   t.end();
 });
