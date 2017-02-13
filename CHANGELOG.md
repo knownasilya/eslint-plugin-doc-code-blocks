@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/knownasilya/eslint-plugin-doc-code-blocks/compare/v0.1.1...v0.1.2) (2017-02-13)
+
+
+### Bug Fixes
+
+* **processor:** Remove non-working TS "support" ([f888f53](https://github.com/knownasilya/eslint-plugin-doc-code-blocks/commit/f888f53))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/knownasilya/eslint-plugin-doc-code-blocks/compare/v0.1.0...v0.1.1) (2017-02-13)
 
