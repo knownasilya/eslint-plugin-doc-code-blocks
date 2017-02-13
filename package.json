@@ -5,7 +5,13 @@
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "jsdoc",
+    "yuidoc",
+    "comments",
+    "code fences",
+    "comment code",
+    "lint"
   ],
   "author": "Ilya Radchenko",
   "main": "lib/index.js",
