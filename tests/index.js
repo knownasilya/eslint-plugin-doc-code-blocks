@@ -9,11 +9,11 @@ var cli = new CLIEngine({
     extensions: ['js'],
     ignore: false,
     rules: {
-        'eol-last': 2,
-        'no-console': 2,
-        'no-undef': 2,
-        'quotes': 2,
-        'spaced-comment': 2
+      'eol-last': 2,
+      'no-console': 2,
+      'no-undef': 2,
+      'quotes': 2,
+      'spaced-comment': 2
     },
     useEslintrc: false
 });
