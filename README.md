@@ -26,7 +26,7 @@ $ npm install eslint-plugin-doc-code-blocks --save-dev
 
 Add `doc-code-blocks` to the plugins section of your `.eslintrc.js` configuration file. You can omit the `eslint-plugin-` prefix:
 
-```json
+```js
 module.exports = {
   plugins: [
     'doc-code-blocks'
@@ -42,7 +42,7 @@ then your code base. This is how you'd do that.
 
 In your `.eslintrc.js` or equivalent, set something like:
 
-```json
+```js
 module.exports = {
   extends: [
     'eslint:recommended',
