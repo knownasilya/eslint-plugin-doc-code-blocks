@@ -8,12 +8,14 @@ var cli = new CLIEngine({
     envs: ['browser'],
     extensions: ['js'],
     ignore: false,
+    extends: ['plugin:doc-code-blocks/all'],
     rules: {
       'eol-last': 2,
       'no-console': 2,
       'no-undef': 2,
       'quotes': 2,
-      'spaced-comment': 2
+      'spaced-comment': 2,
+      'doc-code-blocks/quotes': ['error', 'single']
     },
     useEslintrc: false
 });

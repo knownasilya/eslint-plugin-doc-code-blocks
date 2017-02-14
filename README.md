@@ -24,14 +24,14 @@ $ npm install eslint-plugin-doc-code-blocks --save-dev
 
 ## Usage
 
-Add `doc-code-blocks` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `doc-code-blocks` to the plugins section of your `.eslintrc.js` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
-{
-  "plugins": [
-    "doc-code-blocks"
+module.exports = {
+  plugins: [
+    'doc-code-blocks'
   ]
-}
+};
 ```
 
 ## Configuration
@@ -40,21 +40,21 @@ By default, the `doc-code-blocks` plugin uses the default ESLint rules, and the 
 from one ESLint release to another. So you'd want to lock in your rules, or you might want different rules
 then your code base. This is how you'd do that.
 
-In your `.eslintrc` or equivalent, set something like:
+In your `.eslintrc.js` or equivalent, set something like:
 
 ```json
-{
-  "plugins": [
-    "doc-code-blocks"
+module.exports = {
+  extends: [
+    'eslint:recommended',
+    'plugin:doc-code-blocks/all'
   ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:doc-code-blocks/all"
+  plugins: [
+    'doc-code-blocks'
   ],
-  "rules": {
-    "doc-code-blocks/quotes": ["error", "single"]
+  rules: {
+    'doc-code-blocks/quotes': ['error', 'single']
   }
-}
+};
 ```
 
 Make sure to specify `'plugin:doc-code-blocks/all'` in the `extends` array, or your `doc-code-blocks/` namespaced rules will not work.
