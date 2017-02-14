@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-doc-code-blocks",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Lint JavaScript in block comment code blocks",
   "keywords": [
     "eslint",
