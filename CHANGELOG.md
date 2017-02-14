@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/knownasilya/eslint-plugin-doc-code-blocks/compare/v0.1.3...v0.2.0) (2017-02-14)
+
+
+### Bug Fixes
+
+* **doc:** Document the configuration settings ([78a3b24](https://github.com/knownasilya/eslint-plugin-doc-code-blocks/commit/78a3b24))
+
+
+### Features
+
+* **config:** Proxy all eslint rules ([a0bdf74](https://github.com/knownasilya/eslint-plugin-doc-code-blocks/commit/a0bdf74))
+
+
+
 <a name="0.1.3"></a>
 ## [0.1.3](https://github.com/knownasilya/eslint-plugin-doc-code-blocks/compare/v0.1.2...v0.1.3) (2017-02-13)
 
