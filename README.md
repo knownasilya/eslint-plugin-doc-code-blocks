@@ -28,9 +28,9 @@ Add `doc-code-blocks` to the plugins section of your `.eslintrc` configuration f
 
 ```json
 {
-    "plugins": [
-        "doc-code-blocks"
-    ]
+  "plugins": [
+    "doc-code-blocks"
+  ]
 }
 ```
 
@@ -42,16 +42,16 @@ then your code base. This is how you'd do that.
 
 In your `.eslintrc` or equivalent, set something like:
 
-```js
+```json
 {
-  plugins: [
+  "plugins": [
     "doc-code-blocks"
   ],
-  extends: [
+  "extends": [
     "eslint:recommended",
     "plugin:doc-code-blocks/all"
   ],
-  rules: {
+  "rules: {
     "doc-code-blocks/quotes": ["error", "single"]
   }
 }
