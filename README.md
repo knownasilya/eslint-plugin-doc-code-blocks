@@ -34,7 +34,30 @@ Add `doc-code-blocks` to the plugins section of your `.eslintrc` configuration f
 }
 ```
 
+## Configuration
 
+By default, the `doc-code-blocks` plugin uses the default ESLint rules, and the values for these could change
+from one ESLint release to another. So you'd want to lock in your roles, or you might want different rules
+then your code base. This is how you'd do that.
 
+In your `.eslintrc` or equivalent, set something like:
 
+```js
+{
+  plugins: [
+    "doc-code-blocks"
+  ],
+  extends: [
+    "eslint:recommended",
+    "plugin:doc-code-blocks/all"
+  ],
+  rules: {
+    "doc-code-blocks/quotes": ["error", "single"]
+  }
+}
+```
 
+Make sure to specify the `extends`, or your `doc-code-blocks/` namespaced rules will not work.
+You can use all of the default ESLint rules here, like `quotes` above.
+
+*Note: This plugin doesn't currently provide any rules of it's own.*
