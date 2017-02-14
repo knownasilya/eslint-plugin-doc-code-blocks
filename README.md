@@ -51,7 +51,7 @@ In your `.eslintrc` or equivalent, set something like:
     "eslint:recommended",
     "plugin:doc-code-blocks/all"
   ],
-  "rules: {
+  "rules": {
     "doc-code-blocks/quotes": ["error", "single"]
   }
 }
