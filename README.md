@@ -40,24 +40,25 @@ By default, the `doc-code-blocks` plugin uses the default ESLint rules, and the 
 from one ESLint release to another. So you'd want to lock in your rules, or you might want different rules
 then your code base. This is how you'd do that.
 
-In your `.eslintrc.js` or equivalent, set something like:
+In a file like `.doc.eslintrc.js` or equivalent, set something like:
 
 ```js
 module.exports = {
   extends: [
-    'eslint:recommended',
     'plugin:doc-code-blocks/all'
   ],
   plugins: [
     'doc-code-blocks'
   ],
   rules: {
-    'doc-code-blocks/quotes': ['error', 'single']
+    'quotes': ['error', 'single']
   }
 };
 ```
 
-Make sure to specify `'plugin:doc-code-blocks/all'` in the `extends` array, or your `doc-code-blocks/` namespaced rules will not work.
+You can now call this via `eslint --config .doc.eslintrc.js your_files`, basically you'd have to calls to `esslint`, one for your code
+and one for the comments.
+
 You can use all of the default ESLint rules here, like `quotes` above.
 
 *Note: This plugin doesn't currently provide any rules of it's own.*
