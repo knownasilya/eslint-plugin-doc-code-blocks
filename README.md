@@ -69,3 +69,7 @@ You can use all of the default ESLint rules here, like `quotes` above.
   even new ones. Make sure to turn off rules you don't want, if using this mode.
 - `'plugin:doc-code-blocks/recommended'` - This is essentially `eslint:recommended`, and shouldn't break within a major version of ESLint.
 
+## Attribution
+
+Thanks to @locks for the idea, and thanks to @ilyavolodin and @platinumazure from the ESLint gitter channel.
+Also took inspiration from https://github.com/eslint/eslint-plugin-markdown
