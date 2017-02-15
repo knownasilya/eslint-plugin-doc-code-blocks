@@ -45,7 +45,7 @@ In a file like `.doc.eslintrc.js` or equivalent, set something like:
 ```js
 module.exports = {
   extends: [
-    'plugin:doc-code-blocks/all'
+    'plugin:doc-code-blocks/recommended'
   ],
   plugins: [
     'doc-code-blocks'
@@ -62,3 +62,10 @@ and one for the comments.
 You can use all of the default ESLint rules here, like `quotes` above.
 
 *Note: This plugin doesn't currently provide any rules of it's own.*
+
+### Available Extends
+
+- `'plugin:doc-code-blocks/all'` - This is essentially `eslint:all`, and can break your build from release to release, since all rules are enabled,
+  event new ones.
+- `'plugin:doc-code-blocks/recommended'` - This is essentially `eslint:recommended`, and shouldn't break within a major version of ESLint.
+
