@@ -66,6 +66,6 @@ You can use all of the default ESLint rules here, like `quotes` above.
 ### Available Extends
 
 - `'plugin:doc-code-blocks/all'` - This is essentially `eslint:all`, and can break your build from release to release, since all rules are enabled,
-  event new ones.
+  even new ones. Make sure to turn off rules you don't want, if using this mode.
 - `'plugin:doc-code-blocks/recommended'` - This is essentially `eslint:recommended`, and shouldn't break within a major version of ESLint.
 
